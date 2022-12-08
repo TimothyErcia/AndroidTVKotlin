@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="Setting Examples">
+
+    <PreferenceScreen
+        android:key="text_category"
+        android:title="Text Category"
+        android:icon="@drawable/ic_launcher_foreground">
+        <PreferenceCategory
+            android:title="Sample Setting">
+
+            <Preference
+                android:key="preference"
+                android:title="Text preference"
+                android:summary="description"/>
+
+            <Preference
+                android:key="stylized"
+                android:title="Text preference 2"
+                android:summary="description"/>
+
+            <Preference
+                android:key="icon"
+                android:title="Text preference 3"
+                android:summary="description"
+                android:icon="@android:drawable/ic_menu_camera"/>
+
+            <Preference
+                android:key="single_line_title"
+                android:title="Text prefernce 4"
+                android:summary="description"
+                app:singleLineTitle="true"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="action_category"
+        android:title="Action Category"
+        android:icon="@drawable/ic_launcher_foreground">
+        <PreferenceCategory
+            android:title="Sample setting 2">
+
+            <CheckBoxPreference
+                android:key="checkbox"
+                android:title="Checkbox"
+                android:summary="description"/>
+
+            <SwitchPreference
+                android:key="switch"
+                android:title="Toggle"
+                android:defaultValue="true"
+                android:summary="description"/>
+
+            <DropDownPreference
+                android:key="dropdown"
+                android:title="Dropdown"
+                android:entries="@array/entries"
+                app:useSimpleSummaryProvider="true"
+                android:entryValues="@array/entry_values"/>
+
+            <SeekBarPreference
+                android:key="seekbar"
+                android:title="Seek bar"
+                android:max="10"
+                android:defaultValue="5"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="editable_category"
+        android:title="Editable Category"
+        android:icon="@drawable/ic_launcher_foreground">
+        <PreferenceCategory
+            android:title="Sample setting 3">
+
+            <EditTextPreference
+                android:key="edittext"
+                android:title="Edit text"
+                app:useSimpleSummaryProvider="true"
+                android:dialogTitle="Edit text title"/>
+
+            <ListPreference
+                android:key="list"
+                android:title="Radio Group preference"
+                app:useSimpleSummaryProvider="true"
+                android:entries="@array/entries"
+                android:entryValues="@array/entry_values"
+                android:dialogTitle="Radio header"/>
+
+            <MultiSelectListPreference
+                android:key="multi_select_list"
+                android:title="Multi Selection preference"
+                android:summary="description"
+                android:entries="@array/entries"
+                android:entryValues="@array/entry_values"
+                android:dialogTitle="Multi Selection header"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="expanding_category"
+        android:title="Expanding Category"
+        android:icon="@drawable/ic_launcher_foreground">
+        <PreferenceCategory
+            android:key="advanced"
+            android:title="sample setting 4"
+            app:initialExpandedChildrenCount="1">
+
+            <Preference
+                android:key="expandable"
+                android:title="Expanding preference"
+                android:summary="description"/>
+
+            <Preference
+                android:title="Intent Preference"
+                android:summary="description">
+
+                <intent android:action="android.intent.action.VIEW"
+                    android:data="http://www.android.com"/>
+
+            </Preference>
+
+            <SwitchPreference
+                android:key="parent"
+                android:defaultValue="false"
+                android:title="Child Toggle"
+                android:summary="description"/>
+
+            <SwitchPreference
+                android:key="child"
+                android:dependency="parent"
+                android:title="Toggle Compat"
+                android:defaultValue="false"
+                android:summary="description"/>
+
+            <SwitchPreference
+                android:key="toggle_summary"
+                android:title="Description Toggle"
+                android:defaultValue="false"
+                android:summaryOn="description on"
+                android:summaryOff="description off"/>
+
+            <Preference
+                android:key="copyable"
+                android:title="Copyable preference"
+                android:summary="description"
+                android:selectable="false"
+                app:enableCopying="true"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:key="open_intent_category"
+        android:title="Open Intent Category"
+        android:icon="@drawable/ic_launcher_foreground">
+        <PreferenceCategory
+            android:title="Setting with Intent">
+            <Preference
+                android:key="dialogFragment"
+                android:title="Open Dialog"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+
+</PreferenceScreen>

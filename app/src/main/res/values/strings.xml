@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">AndroidTVKotlin2</string>
+    <string-array name="entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="entry_values">
+        <item>Value 1</item>
+        <item>Value 2</item>
+        <item>Value 3</item>
+    </string-array>
+
+    <style name="LeanbackPreferences" parent="Theme.AndroidTVKotlin2">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Leanback</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>
